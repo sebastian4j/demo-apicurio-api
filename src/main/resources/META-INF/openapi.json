@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Demo Apicurio API",
+    "description": "Pruebas utilizando Apicurio",
+    "contact": {
+      "name": "Sebastian Avila A.",
+      "url": "https://github.com/sebastian4j",
+      "email": "sebastian4j@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/saludos/{nombre}": {
+      "get": {
+        "description": "Obtiene el saludo para personalizado",
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {}
+            }
+          }
+        }
+      },
+      "servers": [
+        {
+          "url": "http://localhost:8080/",
+          "description": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "nombre",
+          "in": "path",
+          "description": "Nombre a quien va dirigido el saludo",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  }
+}
